@@ -47,7 +47,7 @@ linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
     width: 660px;
     min-height: 680px;
     background: #bbf;
-    padding: 32px;
+    padding: 0 32px;
     border-radius: 5px;
     box-shadow: 0 0 10px 2px rgba(46, 61, 255, 0.4);
     display: flex;
@@ -70,6 +70,7 @@ linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
     justify-content: center;
     align-items: center;
     box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+    margin: 0;
 }
 
 .deck .card.open {
@@ -88,29 +89,21 @@ linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
     background: #02ccba;
     font-size: 33px;
 }
-
-
-.misMatch {
-    transition: 1s;
-    transform: rotateY(0);
-    background-color: "#f00";
-}
-
 /*
  * Styles for the Score Panel
  */
 
 .score-panel {
-    width: 600px;
+    width: 660px;
     margin-bottom: 0px;
-    font-size: 25px;
+    font-size: 30px;
 }
 
 .score-panel .stars {
     margin: 0;
     padding: 0;
     display: inline-block;
-    margin: 0 10px 0 0;
+    margin: 0 5px 0 0;
 }
 
 .score-panel .stars li {
@@ -125,13 +118,13 @@ linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
 }
 
 #moves {
-    margin: 15px;
+    margin: 0;
 }
 
 #timer {
-    margin: 0 auto;
-    font-family: 'Jua';
-    font-style: italic;
+    margin-left: 2px;
+    margin-right: 0;
+    font-family: 'Coda';
     text-align: center;
     display: inline;
 }
@@ -139,6 +132,7 @@ linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
 .score-panel .restart {
     float: right;
     cursor: pointer;
+    margin-right: 10px;
 }
 
 .clickDisable {
@@ -154,38 +148,22 @@ linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
 #winnerCard {
     width: 100%;
     height: 100%;
-    background: #fff;
-    opacity: 0.97;
+    background: #abc;
+    opacity: 0.95;
     z-index: 1;
     position: fixed;
     display: none;
 }
 
 #low {
-    margin: 10% auto;
-    width: 60%;
-    height: 60%;
+    margin: 5% auto;
+    width: 70%;
+    height: 75%;
     font-size: 20px;
     background: #333;
     text-align: center;
 
 }
-
-/*  #upper {
-            width: 120px;
-            height: 100px;
-            font-size: 40px;
-            opacity: 0.8;
-            z-index: 3;
-            top: 20px;
-            left: 30px;
-            background: #123;
-            text-align: center;
-            
-            align-items: center;
-            justify-content: center;
-        }*/
-
 .stars {
     margin: 0 auto;
     list-style-type: none;
@@ -199,7 +177,7 @@ linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
 
 #low .fa-star {
     color: #ff1;
-    font-size: 40px;
+    font-size: 30px;
     padding: 10px;
     text-align: center;
 }
@@ -221,8 +199,8 @@ linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
 }
 
 .food {
-    height: 50%;
-    min-height: 30%;
+    height: 45%;
+    min-height: 20%;
 }
 
 .fa-close {
@@ -236,15 +214,15 @@ linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
 }
 
 .again {
-    margin: 1% auto;
-    width: 20%;
-    height: 10%;
+    margin: 0 auto;
+    width: 120px;
+    height: 50px;
     background: #aaf;
     border: 0 none #222;
     font-size: 20px;
     font-family: 'Jua';
     border-radius: 30%;
-    box-shadow: 0 0 10px 2px #aaf;
+    box-shadow: 0 0 5px 0px #000;
     display: block;
 
 }

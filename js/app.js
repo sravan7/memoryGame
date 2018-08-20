@@ -7,7 +7,6 @@ function displayWin() {
     //console.log(temp[2], temp[3])
     low.insertAdjacentHTML("afterbegin", temp[2].innerHTML);
     low.insertAdjacentHTML("afterbegin", temp[0].innerHTML)
-
     winner.style.display = "block";
 }
 //closeCard() closes the winner card
@@ -18,7 +17,6 @@ function closeCard() {
 const cardArea = document.querySelector(".deck");
 let cards = "";
 let openedCards = [];
-let moves = 0;
 let stars = document.querySelector(".stars")
 const timer = document.querySelector("#timer");
 let seconds = 0;
@@ -70,6 +68,10 @@ function restart() { //
     minutes = 0;
     matched = 0;
     score = 0;
+    stars.innerHTML = "";
+    stars.innerHTML = `<li><i class="fa fa-star"></i></li>
+                       <li><i class="fa fa-star"></i></li>
+                       <li><i class="fa fa-star"></i></li>`
     timer.innerText = "Time:";
     moveClass.innerText = "Moves:";
     clearInterval(setTimer);
@@ -82,6 +84,7 @@ console.log("completed");
 //console.log(cards);
 //listenr() function add evenListenr to all the cards and opens the card
 function listner() {
+    let moves = 0;
     for (let i = 0; i < cards.length; i++) {
 
         cards[i].addEventListener("click", function (e) {
@@ -140,19 +143,20 @@ function match() {
 // close() function closes the opened cards upon  mis match
 function close() {
     //console.log(openedCards.length);
-    for (let i = 0; i < openedCards.length; i++) {
-        //console.log(openedCards);
-        //openClass.style.cssText = "transition:0.1s; transform:rotateY(0); background:#f00;";
-        setTimeout(t(i), 1000);
-        //console.log(openedCards);
-        function t(i) {
-            openedCards[i].classList.add("misMatch");
-            //console.log("mis Matched");
-        }
-        console.log(openedCards.length, openedCards);
-        openedCards[i].classList.remove("show", "open", "clickDisable");
+    for (const z of openedCards) {
+        setTimeout(() => {
+            console.log("waiting")
+            z.classList.add("animated", "wobble", "faster")
+            z.classList.remove("show", "open", "clickDisable")
+        }, 200)
+        //z.style.backgroundColor="#2e3d49";
+        z.classList.remove("animated", "wobble", "faster")
+
+        //console.log("inside the for loop")
     }
+        //console.log(openedCards.length, openedCards);
 }
+
 
 //starRating() function updates rating based on number of moves to win the game
 function starRating() {

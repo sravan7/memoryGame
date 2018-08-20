@@ -6,10 +6,123 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Matching Game</title>
     <meta name="description" content="">
+    <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
-    <link rel="stylesheet" href="css/app.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Jua">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+    <style>
+        @media screen and (min-width:500px) and (max-width:681px) {
+
+            body {
+                background-color: aqua;
+            }
+            .deck {
+                width: 500px;
+                min-height: 600px;
+                padding: 10px;
+            }
+            .deck .card {
+                width: 100px;
+                height: 100px;
+            }
+            .score-panel {
+                width: 500px;
+                font-size: 27px;
+            }
+        }
+
+        @media screen and (min-width:393px) and (max-width:499px) {
+
+            body {
+                background-color: green;
+            }
+            .deck {
+                width: 393px;
+                min-height: 600px;
+                padding: 10px;
+
+            }
+            .deck .card {
+                width: 85px;
+                height: 130px;
+            }
+            .score-panel {
+                width: 350px;
+                font-size: 20px;
+            }
+
+        }
+
+        @media screen and (min-width:320px) and (max-width:392px) {
+            body {
+                background-color: skyblue;
+            }
+            .deck {
+                width: 320px;
+                min-height: 500px;
+                margin: 0;
+                padding: 10px;
+            }
+            .deck .card {
+                width: 70px;
+                height: 70px;
+            }
+            .score-panel {
+                width: 320px;
+                font-size: 20px;
+            }
+        }
+
+        @media screen and (max-width:319px) {
+            body {
+                background-color: darkred;
+                font-size: 10px;
+            }
+            h1 {
+                margin: 2px auto;
+            }
+            .deck {
+                width: 240px;
+                min-height: 100px;
+                margin: 0;
+                padding: 10px;
+            }
+            .deck .card {
+                width: 50px;
+                height: 45px;
+                margin-bottom: 5px;
+            }
+            .score-panel {
+                width: 240px;
+                font-size: 16px;
+            }
+            #low {
+                font-size: 20px;
+            }
+
+            #low .fa-star {
+                font-size: 18px;
+            }
+
+            .wText {
+
+                font-size: 18px;
+            }
+
+            .food {
+                height: 25%;
+                min-height: 20%;
+            }
+            .again {
+                width: 100px;
+                height: 30px;
+                font-size: 18px;
+            }
+        }
+    </style>
+
 </head>
 
 <body>
