@@ -11,6 +11,9 @@ function displayWin() {
 }
 //closeCard() closes the winner card
 function closeCard() {
+    const low = winner.querySelector("#low");
+    low.removeChild(low.firstChild);
+    low.removeChild(low.firstChild);
     winner.style.display = "none";
     restart();
 }
