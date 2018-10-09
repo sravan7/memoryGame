@@ -11,9 +11,16 @@ function displayWin() {
 }
 //closeCard() closes the winner card
 function closeCard() {
+<<<<<<< HEAD
     const low = winner.querySelector("#low");
     low.removeChild(low.firstChild)
     low.removeChild(low.firstChild)
+||||||| merged common ancestors
+=======
+    const low = winner.querySelector("#low");
+    low.removeChild(low.firstChild);
+    low.removeChild(low.firstChild);
+>>>>>>> 7f74de4fdbf5b7b2b700d5da00d146b41c8c343a
     winner.style.display = "none";
     restart();
 }
